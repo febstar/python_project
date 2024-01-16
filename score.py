@@ -11,7 +11,7 @@ class Scoreboard(Turtle):
         self.goto(0, 250)
         self.score1 = 0
         self.score2 = 0
-        self.write(f"Scores", move=False, align='center', font=('Arial', 20, 'normal'))
+        self.write("Scores", move=False, align='center', font=('Arial', 20, 'normal'))
 
 
 
