@@ -1,5 +1,5 @@
 from turtle import Turtle
-import random
+import secrets
 
 
 class Ball(Turtle):
@@ -12,19 +12,19 @@ class Ball(Turtle):
         self.color("black")
         self.x_move = 10
         self.y_move = 10
-        self.setheading(random.randint(0, 360))
+        self.setheading(secrets.SystemRandom().randint(0, 360))
 
     def T1(self):
-        self.setheading(random.randint(0, 90))
+        self.setheading(secrets.SystemRandom().randint(0, 90))
 
     def T3(self):
-        self.setheading(random.randint(90, 180))
+        self.setheading(secrets.SystemRandom().randint(90, 180))
 
     def T4(self):
-        self.setheading(random.randint(180, 270))
+        self.setheading(secrets.SystemRandom().randint(180, 270))
 
     def T2(self):
-        self.setheading(random.randint(270, 360))
+        self.setheading(secrets.SystemRandom().randint(270, 360))
 
     def move(self):
         random_x = self.xcor() + self.x_move

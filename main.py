@@ -3,8 +3,9 @@ from paddle import Paddle
 from ball import Ball
 from score import Scoreboard
 from ai import COM
-import random
 import time
+import secrets
+
 screen = Screen()
 screen.screensize(600, 600)
 screen.bgcolor("blue")
@@ -35,7 +36,7 @@ while game_is_on:
 
         if segment.distance(ball) < 15:
             ran = [ball.T1(), ball.T2()]
-            random.choice(ran)
+            secrets.SystemRandom().choice(ran)
 
             if ball.ycor() > 280:
                 ball.T2()
@@ -46,7 +47,7 @@ while game_is_on:
     for segment in com.lists:
         if segment.distance(ball) < 15:
             ran = [ball.T4(), ball.T3()]
-            random.choice(ran)
+            secrets.SystemRandom().choice(ran)
 
             if ball.ycor() > 280:
                 ball.T3()
